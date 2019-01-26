@@ -1,15 +1,24 @@
-import java.io.Console;
+import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        Console myConsole = System.console();
+        Scanner scanner = new Scanner(System.in);
 
-        Cipher userInput = new Cipher("sample", "sample", 26);
-        System.out.println(userInput.getMinput());
+        Encoding encoding = new Encoding("","",22,"");
+
+
+// encoding
         System.out.println("Add your string");
-        String userString = myConsole.readLine();
-        userInput.setMinput(userString);
-        System.out.println(userInput.getMinput());
+        String userString = scanner.nextLine();
+        encoding.setMinput(userString);
+        encoding.encrypt(userString,22);
+        System.out.println("Encoded: " + encoding.getResult());
+// decoding
+        Decoding decoding = new Decoding("","");
+        String encoded = encoding.getResult();
+        decoding.setEncoded(encoded);
+        decoding.decode(encoded,22);
+        System.out.println("Decoded: " + decoding.getDecoded());
 
     }
 }
