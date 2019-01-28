@@ -9,7 +9,7 @@ The objective of this project is to create an application, that allows the user 
 ----------------------------------------------------------------------
 
 ## Technologies used
-This project has been written in java programming language.
+This project has been written using java programming language.
 
 -----------------------------------------------------------------------------
 
